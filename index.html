@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <LInk rel="stylesheet" href="css/test.css"></LInk>
+</head>
+<body>
+   <div class="container crud">
+    <header>product managment system</header>
+    <div class="input">
+        <div class="product">
+            <input type="text" id="title" placeholder="name product">
+        </div>
+        <div class="calc">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="getTotal()" type="number" id="tax" placeholder="tax">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+            <small id="total" style=" color: wheat; font-size: 20px; "></small>
+        </div>
+        <input type="number"  id="count" placeholder="count">
+        <input type="text"  id="category" placeholder="category">
+        <button id="create">create</button>
+    </div>
+    <div class="output">
+        <div class="serach">
+            <input onkeyup="serachData(this.value)" type="search"  id="serach" placeholder="search">
+            <div class="btn-search" id="serach">
+                <button  onclick="getSearchMode(this.id)" id="byTitle">search by title</button>
+                <button onclick="getSearchMode(this.id)" id="byCategory">search by category</button>
+            </div>
+        </div>
+        <hr style="color: aqua;">
+        <div id="delteAll">
+            
+        </div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>product name</th>
+                <th>price</th>
+                <th>tax</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbody">
+        
+            </tbody>
+        </table>
+    </div>
+   </div>
+
+  
+
+<script src="js/main.js"></script>
+<script src="js/articles.json"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+</html>
